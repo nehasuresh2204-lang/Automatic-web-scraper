@@ -53,7 +53,7 @@ def export_results(data: list[dict], fmt: str, output: str) -> str:
 
 def print_rich_table(data: list[dict], query: str):
     if not data:
-        console.print(Panel("⚠ No data to display.", style="yellow"))
+        console.print(Panel(" No data to display.", style="yellow"))
         return
 
     table = Table(
@@ -118,7 +118,7 @@ async def _run(args):
 
     if not api_key:
         console.print(Panel(
-            "[red]❌ Groq API key not found.[/red]\n\n"
+            "[red] Groq API key not found.[/red]\n\n"
             "Set it via:\n"
             "  • [bold]--key YOUR_KEY[/bold] flag\n"
             "  • [bold]export GROQ_API_KEY=YOUR_KEY[/bold] env variable\n\n"
@@ -155,7 +155,7 @@ async def _run(args):
     if result["status"] == "error":
         console.print(Panel(
             f"[red]An error occurred.[/red]\n{result['reasoning']}",
-            title="❌ Error", border_style="red"
+            title=" Error", border_style="red"
         ))
         return
 
@@ -167,7 +167,7 @@ async def _run(args):
     else:
         path = export_results(data, args.format, args.output)
         console.print(Panel(
-            f"[green]✅ {len(data)} items exported → [bold]{path}[/bold][/green]",
+            f"[green] {len(data)} items exported → [bold]{path}[/bold][/green]",
             border_style="green"
         ))
         # Always also print table for visibility
@@ -178,7 +178,7 @@ async def _run(args):
     # (slashes in https://... get misread as closing tags, causing MarkupError)
     from rich.text import Text
     summary = Text()
-    summary.append(f"✅ {len(data)} items extracted\n", style="bold green")
+    summary.append(f" {len(data)} items extracted\n", style="bold green")
     summary.append(
         f"Pages visited ({len(result['visited'])}): "
         + " → ".join(result['visited']) + "\n",
