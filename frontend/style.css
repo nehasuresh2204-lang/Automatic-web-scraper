@@ -206,39 +206,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ── Example buttons ──────────────────────────────────────────────────────── */
-
-.form-examples {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 28px;
-}
-
-.examples-label {
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-right: 4px;
-  white-space: nowrap;
-}
-
-.example-btn {
-  background: transparent;
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
-  color: var(--mid);
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  padding: 5px 11px;
-  transition: border-color 0.15s, color 0.15s;
-}
-
-.example-btn:hover {
-  border-color: var(--accent-border);
-  color: var(--accent);
-}
 
 /* ── Action buttons ───────────────────────────────────────────────────────── */
 
@@ -563,80 +530,6 @@ a:hover {
   line-height: 1.6;
 }
 
-/* ── How it works ─────────────────────────────────────────────────────────── */
-
-.how-section {
-  border-top: 1px solid var(--border);
-  padding: 64px 0;
-}
-
-.how-section h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 40px;
-  letter-spacing: -0.2px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.step {
-  display: flex;
-  gap: 20px;
-}
-
-.step-number {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 1px;
-  padding-top: 3px;
-  min-width: 24px;
-}
-
-.step-content h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 6px;
-}
-
-.step-content p {
-  font-size: 0.83rem;
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-/* ── Footer ───────────────────────────────────────────────────────────────── */
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 24px 0;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.site-footer span {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.footer-stack {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.3px;
-}
 
 /* ── Scrollbar ────────────────────────────────────────────────────────────── */
 

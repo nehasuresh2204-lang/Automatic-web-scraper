@@ -13,12 +13,8 @@
       <div class="header-inner">
         <div class="brand">
           <span class="brand-name">Web Scraper Agent</span>
-          <span class="brand-tag">Autonomous. Agentic. Free.</span>
         </div>
-        <nav class="header-nav">
-          <a href="#how-it-works">How it works</a>
-          <a href="https://console.groq.com" target="_blank" rel="noopener">Get API Key</a>
-        </nav>
+        
       </div>
     </div>
   </header>
@@ -28,7 +24,7 @@
     <!-- ── Hero ─────────────────────────────────────────────────────────── -->
     <section class="hero">
       <div class="container">
-        <h1>Extract structured data from any website.</h1>
+        <h1>Extract structured data from website.</h1>
         <p class="hero-sub">
           Give it a URL and a plain English question.
           The agent navigates, reasons, and returns a clean table you can download.
@@ -50,7 +46,6 @@
               autocomplete="off"
               spellcheck="false"
             />
-            <span class="field-hint">The starting page. The agent will navigate from here.</span>
           </div>
 
           <div class="form-group">
@@ -62,14 +57,6 @@
               spellcheck="false"
             ></textarea>
             <span class="field-hint">Be specific. Name the fields you want returned.</span>
-          </div>
-
-          <div class="form-examples">
-            <span class="examples-label">Try an example:</span>
-            <button class="example-btn" data-url="https://tiobe.com/tiobe-index/" data-query="List the top 10 programming languages with their rank and rating percentage">TIOBE Rankings</button>
-            <button class="example-btn" data-url="https://books.toscrape.com/" data-query="Give 5 books in the poetry category with name and price">Books by category</button>
-            <button class="example-btn" data-url="https://jmangroup.com/" data-query="Give all job openings with title, location and team">Job listings</button>
-            <button class="example-btn" data-url="https://jmangroup.com/" data-query="Give the name and title of all leadership team members">Company leadership</button>
           </div>
 
           <div class="form-actions">
@@ -137,62 +124,7 @@
         </div>
       </div>
     </section>
-
-    <!-- ── How it works ───────────────────────────────────────────────────── -->
-    <section class="how-section" id="how-it-works">
-      <div class="container">
-        <h2>How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <h4>Browser fetch</h4>
-              <p>Playwright opens a real Chromium browser and loads your URL, including all JavaScript. This is why it works on modern sites.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <h4>Content extraction</h4>
-              <p>The page HTML is cleaned and stripped of navigation, scripts, and boilerplate. Product cards and tables are extracted with a structured parser.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <h4>LLM reasoning</h4>
-              <p>The cleaned text and all page links are sent to Groq (llama-3.3-70b). The model decides: extract the data, navigate to another page, or report not found.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">04</div>
-            <div class="step-content">
-              <h4>Navigate and repeat</h4>
-              <p>If the model says navigate, the agent follows that link and repeats from step one. It continues until it finds the data or exhausts useful paths.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">05</div>
-            <div class="step-content">
-              <h4>Structured output</h4>
-              <p>All extracted items are returned as a table. Every row includes the source URL. Download as CSV, Excel, or JSON.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span>Web Scraper Agent</span>
-        <span class="footer-stack">Python + Playwright + Groq + FastAPI</span>
-      </div>
-    </div>
-  </footer>
-
   <script src="/static/app.js"></script>
 
 </body>
